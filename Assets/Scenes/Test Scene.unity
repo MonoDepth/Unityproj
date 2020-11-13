@@ -134,9 +134,10 @@ GameObject:
   - component: {fileID: 1165512978}
   - component: {fileID: 1165512977}
   - component: {fileID: 1165512976}
+  - component: {fileID: 1165512979}
   - component: {fileID: 1165512975}
   m_Layer: 0
-  m_Name: Temporary Charachter
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,6 +222,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1165512979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165512974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd355e849d92394998e2f8a34639d58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 100
 --- !u!1 &1442805335
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,9 +321,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1696086104}
   - component: {fileID: 1696086106}
+  - component: {fileID: 1696086107}
   - component: {fileID: 1696086105}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: Main Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -380,6 +395,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1696086107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696086103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb090d8a130a744294fe37355a15f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0
 --- !u!1 &1762356461
 GameObject:
   m_ObjectHideFlags: 0
