@@ -28,7 +28,7 @@ public class SC_TPSController : MonoBehaviour
     {
         if (characterController.isGrounded)
         {
-            // We are grounded, so recalculate move direction based on axis
+            // We are grounded, so recalculate move direction based on axes
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
             float curSpeedX = canMove ? speed * Input.GetAxis("Horizontal") : 0;
