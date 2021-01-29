@@ -52,10 +52,10 @@ public class SC_TPSController : MonoBehaviour
         // Player and Camera rotation
         if (canMove)
         {
-            rotation.y += Input.GetAxis("Mouse X") * lookSpeed;
-            rotation.x += -Input.GetAxis("Mouse Y") * lookSpeed;
-            rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
-            playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
+            rotation.y += Input.GetAxis("Mouse X") * lookSpeed; //Definition of mouse movement to camera angles
+            rotation.x += -Input.GetAxis("Mouse Y") * lookSpeed; //Definition of mouse movement to camera angles
+            rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit); //Angle limiter
+            playerCameraParent.localRotation = Quaternion.Euler(-rotation.x, 0, 0); //Negative rotation x to get mouse y to look up and -mouse y to look down
             transform.eulerAngles = new Vector2(0, rotation.y);
         }
     }
