@@ -5,18 +5,18 @@ using UnityEngine.UI;
 
 public class triggerLogic : MonoBehaviour
 {
-    public GameObject canvasT;
+    bool test;
     public canvasHandler canvasHandler;
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter()
     {
-        canvasHandler.ToggleItemInfoBox
-        
-        
+        test = true;
+        canvasHandler.ToggleItemInfoBox(test);
     }
 
-    private void OnTriggerExit(Collider other)
+    public void OnTriggerExit()
     {
-        
+        test = false;
+        canvasHandler.ToggleItemInfoBox(test);
     }
 
     // Start is called before the first frame update
