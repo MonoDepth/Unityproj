@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class canvasHandler : MonoBehaviour
 {
-    GameObject canvasUIElement = GameObject.FindWithTag("findMePleaseCanvas");
     public void ToggleItemInfoBox(bool test)
     {
-        if (Input.GetKeyDown("f") && test == true) //Enables on enterance
+        
+
+        if (test == true) //Disables cavas on leave
         {
-            canvasUIElement.SetActive(true);
+            gameObject.SetActive(true);
         }
 
-        if(test == false) //Disables cavas on leave
+        if (test == false) //Disables cavas on leave
         {
-            canvasUIElement.SetActive(false);
+            gameObject.SetActive(false);
         }
 
     }
@@ -22,7 +23,8 @@ public class canvasHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canvasUIElement.SetActive(false);
+        Debug.Log("Vi startade");
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame

@@ -58,5 +58,6 @@ public class SC_TPSController : MonoBehaviour
             playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0); 
             transform.eulerAngles = new Vector2(0, rotation.y);
         }
+
     }
 }
