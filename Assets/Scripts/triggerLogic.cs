@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class triggerLogic : MonoBehaviour
 {
@@ -9,12 +10,20 @@ public class triggerLogic : MonoBehaviour
     public Transform cameraObject;
     public float triggerDistance = 10;
     public Transform playerHead;
+    
      public void OnTriggerEnter(Collider col)
      {
+        Text textB = (Text)FindObjectOfType<Text>(true);
         if (!col.CompareTag("ignoreInteract"))
         {
+
             Debug.Log(col.name);
             test = true;
+            Text tB = textB.GetComponent<Text>();
+            string testName = string.Copy(col.name);
+            Debug.Log($"testName: {testName}");
+            tB.text = $"This object is called {testName}";
+            Debug.Log("Stopping point");
         }
      }
 
