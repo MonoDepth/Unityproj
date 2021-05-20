@@ -6,24 +6,36 @@ using UnityEngine.UI;
 public class triggerLogic : MonoBehaviour
 {
     bool test;
+    bool dummyTest;
     public canvasHandler canvasHandler;
     public Transform cameraObject;
     public float triggerDistance = 10;
     public Transform playerHead;
-    
-     public void OnTriggerEnter(Collider col)
+    public dummyScript dummyScript;
+
+    public void OnTriggerEnter(Collider col)
      {
         Text textB = (Text)FindObjectOfType<Text>(true);
         if (!col.CompareTag("ignoreInteract"))
         {
-
             Debug.Log(col.name);
             test = true;
+            
             Text tB = textB.GetComponent<Text>();
             string testName = string.Copy(col.name);
             Debug.Log($"testName: {testName}");
             tB.text = $"This object is called {testName}";
-            Debug.Log("Stopping point");
+            
+            if (col.name == "WhitegolemActuallyFixed")
+            {
+                dummyTest = true;
+                dummyScript.dummyToggle(dummyTest);
+            }
+            else
+            {
+                dummyTest = false;
+                dummyScript.dummyToggle(dummyTest);
+            }
         }
      }
 
@@ -39,7 +51,7 @@ public class triggerLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
